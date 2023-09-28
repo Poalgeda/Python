@@ -1,4 +1,4 @@
-#Programa que muestre por pantalla la frase “hello world__”
+#Programa que muestre por pantalla la frase “hello world”
 
 print ("hello world")
 input ()
