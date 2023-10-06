@@ -4,7 +4,6 @@ var1=int(input("Introduce el primer numero"))
 var2=int(input("Introduce el segundo numero"))
 total=var1//var2
 resto=var1 % var2
-
     
 print("El cociente es: ", float(total))
 print("El resto es: ",resto)
