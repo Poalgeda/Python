@@ -1,0 +1,11 @@
+#VERSIÓ 1: Realitzar un programa que permeti introduir una ‘paraula clau’ amb les següents característiques:
+print("1.La contrasenya ha de tenir  entre 6 i 8 caràcters:")
+print("2.Forçar els valor seguentes segons la posició indicada:")
+print("     Posició 1: Major o igual a 1, o menor o igual a 5.")
+print("     Posició 2: Lletra minúscula.")
+print("     Posició 3: Lletra mayúscula.")
+print("     Posició 4: Un dels següents símbols: *, @, _.")
+print("     Posició 5: Lletra mayúscula.")
+print("     Posició 6: Un número major o igual a 6 i menor o igual que 9")
+print("     Posició 7: Un dels següents símbols: &, /, #.")
+print("     Posició 8: Un número menor o igual a 5")
