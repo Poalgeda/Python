@@ -1,6 +1,4 @@
-#Asigna a una variable de texto la siguiente frase: A quién madruga Dios ayuda. 
-#Comprueba si existen las siguientes palabras mostrando por pantalla la posición de su 
-#índice.
+#Asigna a una variable de texto la siguiente frase: A quién madruga Dios ayuda. Comprueba si existen las siguientes palabras mostrando por pantalla la posición de su índice.
 stc="A quién madruga dios ayuda: "
 var1=input("introduce una palabra: ")
 indice=stc.find(var1)
