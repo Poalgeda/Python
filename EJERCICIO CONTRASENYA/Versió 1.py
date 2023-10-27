@@ -19,6 +19,9 @@ p6=password[5]
 p7=password[6]
 p8=password[7]
 if len(password) <=8 and len(password) >=6:
-    if p1
+    print("La contrasenya es válida:")
 else:
     print(f"La palabra clave tiene una longitud de {len(password)} y no cumple con los requisitos.")
+
+if p1 <=1 and  p1 >=5:
+    p
