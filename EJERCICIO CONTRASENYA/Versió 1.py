@@ -24,4 +24,38 @@ else:
     print(f"La palabra clave tiene una longitud de {len(password)} y no cumple con los requisitos.")
 
 if p1 <=1 and  p1 >=5:
-    p
+    pos1=True
+else:
+    pos1=False
+
+if p2.islower():
+    pos2=True
+else:
+    pos2=False
+
+if p3.isupper():
+    pos3=True
+else:
+    pos3=False
+
+if p4 == "@" or "#" or "/":
+    pos4=True
+else:
+    pos4=False
+
+if p5.isupper():
+    pos5=True
+else:
+    pos5=False
+
+if p6 <=6 and  p6 >=9:
+    pos6=True
+else:
+    pos6=False
+
+if p7 == "&" or "#" or "/":
+    pos7=True
+else:
+    pos7=False
+
+if p7 >=5
