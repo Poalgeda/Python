@@ -10,52 +10,60 @@ print("     Posició 6: Un número major o igual a 6 i menor o igual que 9")
 print("     Posició 7: Un dels següents símbols: &, /, #.")
 print("     Posició 8: Un número menor o igual a 5")
 password=input("Introduce una palabra clave de entre 6 a 8 palabras: ")
-p1=password[0]
-p2=password[1]
-p3=password[2]
-p4=password[3]
-p5=password[4]
-p6=password[5]
-p7=password[6]
-p8=password[7]
+
 if len(password) <=8 and len(password) >=6:
-    print("La contrasenya es válida:")
+    print()
 else:
     print(f"La palabra clave tiene una longitud de {len(password)} y no cumple con los requisitos.")
 
-if p1 <=1 and  p1 >=5:
-    pos1=True
-else:
-    pos1=False
+texto_error=""
 
-if p2.islower():
-    pos2=True
-else:
-    pos2=False
+pos_1=int(password[0])
+if not(pos_1 >= 1 and pos_1 <= 5):
+    texto_error= texto_error + "El primer digito es incorrecto, "
 
-if p3.isupper():
-    pos3=True
-else:
-    pos3=False
+pos_2=password[1]
+mayus=pos_2.isupper()
 
-if p4 == "@" or "#" or "/":
-    pos4=True
-else:
-    pos4=False
+if not (mayus is False):
+    texto_error= texto_error + "El segundo digito es incorrecto, "
 
-if p5.isupper():
-    pos5=True
-else:
-    pos5=False
+pos_3=password[2]
+mayus=pos_2.isupper()
 
-if p6 <=6 and  p6 >=9:
-    pos6=True
-else:
-    pos6=False
+if not (mayus is False):
+    texto_error= texto_error + "El tercer digito es incorrecto, "
 
-if p7 == "&" or "#" or "/":
-    pos7=True
-else:
-    pos7=False
+pos_4=password[3]
+if not(pos_4 == "*" or pos_4 == "_" or pos_4 == "@"):
+    texto_error= texto_error + "El cuarto digito es incorrecto, "
 
-if p7 >=5
+pos_5=password[4]
+mayus=pos_2.isupper()
+
+if not (mayus is False):
+    texto_error= texto_error + "El quinto digito es incorrecto, "
+
+
+pos_6=int(password[5])
+
+if not(pos_6 <= 9 and pos_6 >= 6):
+    texto_error= texto_error + "El sexto digito es incorrecto, "
+
+    pos_7=password[6]
+
+    if not(pos_7 == "&" or pos_7=="/" or pos_7 == "#"):
+        texto_error= texto_error + "El septimo digito es incorrecto, "
+
+    pos_8=int(password[7])
+
+    if not(pos_8 <= 5):
+        texto_error= texto_error + "El ocatvo digito es incorrecto, "
+        texto_error= texto_error + "Error en el caracter 8."
+
+if texto_error=="":
+    print("La contraseña es valida")
+else:
+    print(texto_error)
+
+input()
