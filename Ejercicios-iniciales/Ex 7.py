@@ -12,9 +12,10 @@ div=var1/var2
 expo=var1**var2
 dive= var1//var2
 
+
 print ("El resultado de la suma es:  ", suma)
 print("El resultado de la resta es:", resta)
 print("El resultado de la multiplicación es: ", mult)
-print(" El resultado de la division es: ", dosdec)
+print(" El resultado de la division es: ", div)
 print("El resultado de la potencia es: ", expo)
 print("El resultado de la division entera es: ", dive)
