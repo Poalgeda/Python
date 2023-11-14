@@ -9,7 +9,7 @@ for cont in range(0, var1):
     num=float(input("Introduce un numero: "))
     if num >0:
         var_positivos+=1
-    elif num <0:
+    elif num <0:        
         var_negativos+=1
     elif num == 0:
         var_ceros +=1
