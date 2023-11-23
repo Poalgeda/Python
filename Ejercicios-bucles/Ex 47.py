@@ -2,17 +2,9 @@
 
 var1=int(input("Introduce el primer intervalo: "))
 var2=int(input("Introduce el segundo intervalo: "))
-
-num_1=""
-num_2=""
-
-if var1>var2:
-    rango=var1-var2+1
+if var1<var2:
+    for cont in range(var1, var2+1):
+        print(cont, end="-")
 else:
-    rango=var2-var1+1
-
-for cont in range(0, rango):
-    
-    num_1 + "{cont}" + "-"
-
-print(num_1)
+    for cont in range(var1, var2-1,-1):
+        print(cont, end="-")
