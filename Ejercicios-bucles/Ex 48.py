@@ -5,5 +5,5 @@ for cont in range(0, len(palabra)):
     letra=input("Introduce una letra: ")
     if letra in palabra and len(letra)==1:
         print(f"La letra {letra} existe.")
-    elif:
+    else:
         print(f"La letra {letra} no existe.")
