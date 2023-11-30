@@ -2,7 +2,6 @@
 
 repeticiones=0
 suma_total=0
-respuesta = "s"
 
 while suma_total <= 50:
     var1=int(input("Introduce el primer numero: "))
@@ -14,7 +13,7 @@ while suma_total <= 50:
     if repeticiones == 1:
         print(f"El total acumulado es: {suma_total} y llevas {repeticiones} operación realizada.")
     else:
-        print(f"El total acumulado es: {suma_total} y llevas {repeticiones} operaciónes realizadas.")
+        print(f"El total acumulado es: {suma_total} y llevas {repeticiones} operaciones realizadas.")
 
 
 print("Fin del programa")
