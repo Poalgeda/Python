@@ -24,28 +24,52 @@ print("2. Acuarius - 1.5 € ")
 print(" 3. Agua - 1 €" )
 
 respuesta="s"
+pedidos = 0
+total_precio = 0
+
 
 while respuesta =="s":
+    pedidos += 1
     op1=int(input("Elige que tipo de bocadillo querrás: "))
     if op1==1:
-        op1=9
+        total_precio +=9
     elif op1 == 2:
-        op1=4.5
+        total_precio +=4.5
     elif op1 == 3:
-        op1=2.5
+        total_precio +=2.5
     op2=int(input("Ingresa que tipo de patatas de acompañamiento vas a pedir: "))
     if op2==1:
-        op2=1.5
+        total_precio +=1.5
     elif op2 == 2:
-        op2=1.75
+        total_precio +=1.75
     elif op2 == 3:
-        op2=2
+        total_precio +=2
     op3=int(input("Por ultimo, la bebida: "))
     if op3==1:
-        op1=2
+        total_precio +=2
     elif op3 == 2:
-        op3=1.5
+        total_precio +=1.5
     elif op3 == 3:
-        op3=1
-    respuesta=input("De acuerdo, va a querer otro pedido o esto es todo?  s/n")
+        total_precio +=1
     
+    respuesta=input("De acuerdo, va a querer otro pedido o esto es todo?  s/n ")
+
+
+precio_iva = (total_precio/100) *110
+precio_iva = round(precio_iva, 2)
+if total_precio <= 30 and total_precio >= 20:
+    precio_descuento=(precio_iva/100)*95
+    precio_descuento = round(precio_descuento, 2)
+    descuento = "5%"
+elif total_precio > 30:
+    precio_descuento=(precio_iva/100)*85
+    descuento = "15%"
+    round(precio_descuento, 2)
+
+
+
+print("RESUMEN")
+print(f"Número de pedidos: {pedidos}")
+print(f"Total a pagar: {total_precio}")
+print(f"Total a pagar con IVA: {precio_iva}")
+print(f"Total a pagar con el descuento de {descuento}: {precio_descuento}")
