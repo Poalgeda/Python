@@ -62,7 +62,7 @@ if total_precio <= 30 and total_precio >= 20:
     precio_descuento = round(precio_descuento, 2)
     descuento = "5%"
 elif total_precio > 30:
-    precio_descuento=(precio_iva/100)*85
+    precio_descuento=round(((precio_iva/100)*85) ,2)
     descuento = "15%"
     round(precio_descuento, 2)
 
