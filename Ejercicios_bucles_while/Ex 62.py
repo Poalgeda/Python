@@ -13,6 +13,39 @@ for cont in range(var1,var2,):
         output2 += str(cont)
         output2 +="-"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
 output1=output1[:-1]
 output2=output2[:-1]
 
