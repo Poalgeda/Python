@@ -5,7 +5,7 @@
 #d) total de números negativos 
 #e) total de ceros 
 #f) total de la suma de todos los números introducidos
-
+import time
 ceros=0
 pares=0
 impares=0
