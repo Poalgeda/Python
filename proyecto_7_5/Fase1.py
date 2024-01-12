@@ -17,7 +17,7 @@ while respuesta1=="s":
         elif carta==4:
             num=4
         elif carta==5:
-            num=5
+            num=5 
         elif carta==6:
             num=6
         elif carta==7:
@@ -29,18 +29,25 @@ while respuesta1=="s":
         elif carta==12:
             num=0.5
         total+=num
+        print(f"Carta: {carta}. Total: {total}")
         if total <= 7:
-            respuesta2=input("Quieres otra carta? s/n")
+            respuesta2=input("Quieres otra carta? s/n ")
         elif total ==7.5:
-            respuesta2=="n"
+            respuesta2="n"
         elif total > 7.5:
-            .0
-            respuesta2 =="n"
-    if total >6:  
+            respuesta2 ="n"
+    if total <6:  
         print("Quizás tendrías que arriesgar un poco ¿no?")
+        respuesta1=input("Quieres jugar otra partida? s/n ")
     elif total <=6 and total >=7:
         print("Has sido un poco conservador")
+        respuesta1=input("Quieres jugar otra partida? s/n ")
     elif total > 7.5:
         print("Has perdido la partida!")
+        respuesta1=input("Quieres jugar otra partida? s/n ")
     elif total==7.5:
         print("Enhorabuena, has ganado la partida")
+        respuesta1=input("Quieres jugar otra partida? s/n ")
+    total=0
+    if respuesta1=="s":
+        respuesta2="s"
