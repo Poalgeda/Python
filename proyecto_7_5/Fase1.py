@@ -39,7 +39,7 @@ while respuesta1=="s":
     if total <6:  
         print("Quizás tendrías que arriesgar un poco ¿no?")
         respuesta1=input("Quieres jugar otra partida? s/n ")
-    elif total <=6 and total >=7:
+    elif total >=6 and total <=7:
         print("Has sido un poco conservador")
         respuesta1=input("Quieres jugar otra partida? s/n ")
     elif total > 7.5:
@@ -50,4 +50,7 @@ while respuesta1=="s":
         respuesta1=input("Quieres jugar otra partida? s/n ")
     total=0
     if respuesta1=="s":
-        respuesta2="s"
+        respuesta2 = "s"
+
+    
+print("Fin del programa 😊👍")
