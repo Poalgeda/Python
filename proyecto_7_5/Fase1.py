@@ -52,5 +52,4 @@ while respuesta1=="s":
     if respuesta1=="s":
         respuesta2 = "s"
 
-    
 print("Fin del programa 😊👍")
