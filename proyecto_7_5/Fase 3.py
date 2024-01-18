@@ -1,14 +1,14 @@
 #En esta fase tienes que conseguir que el usuario compita contra el ordenador (banca).
 import time
 import random
-total=0
-total2=0
 partida="s"
 respuesta1="s"
 respuesta2="s"
 nickname=input("Introduce el nombre que quieres que salga por pantalla: ")
 numeros=[1,2,3,4,5,6,7,10,11,12]
 while partida == "s":
+    total=0
+    total2=0
     #---------------------------------turno del jugador--------------------------------------
     while respuesta1=="s":
         carta=random.choice(numeros)
@@ -48,7 +48,7 @@ while partida == "s":
     while respuesta2=="s":
         var1=time.perf_counter()
         var2=0
-        while var2 <1:
+        while var2 <1.2:
             var2=time.perf_counter()-var1
         carta=random.choice(numeros)
         if carta==1:
@@ -73,16 +73,21 @@ while partida == "s":
             num=0.5
         total2 +=num
         print(f"Carta: {carta}. Total: {total2}")
+        var1=time.perf_counter()
         var2=0
-        while var2 <1:
+        while var2 <2:
             var2=time.perf_counter()-var1
         if total2 <= 7:
             if total2 > total:
                 print("-La banca se planta-")
                 respuesta2="n"
             elif total > 7.5:
-                print("-La banca se planta-")
-                respuesta2="n"
+                if total2 <=4:
+                    print("-La banca coge otra carta-")
+                    respuesta2="s"
+                else:
+                    print("-La banca se planta-")
+                    respuesta2="n"
             elif total <=7.5:
                 if total2 <= 6:
                     print("-La banca coge otra carta-")
@@ -93,6 +98,9 @@ while partida == "s":
         elif total2 > 7.5:
             print("-La banca se ha pasado-")
             respuesta2 ="n"
+    var2=0
+    while var2 <1.5:
+        var2=time.perf_counter()-var1
     if total==total2 and total <= 7.5 and total2 <= 7.5:
         print(f"Banca y {nickname} empatan.")
     elif total>total2 and total <= 7.5 and total2 <= 7.5:
@@ -105,6 +113,7 @@ while partida == "s":
         print("Gana la banca.")
     elif total2>7.5 and total <=7.5:
         print(f"Gana {nickname}.")
+
     partida=input("¿Quieres jugar otra partida? s/n ")
     if partida=="s":
         respuesta1="s"
