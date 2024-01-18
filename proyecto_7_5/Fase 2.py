@@ -61,6 +61,7 @@ while respuesta1=="s" and banca > 0:
         print(f"¡Has ganado 10 puntos! Total: {banca}")
         print("--------------------------------------")
         respuesta1=input("Quieres jugar otra partida? s/n ")
+        print("--------------------------------------")
     total=0
     if respuesta1=="s":
         respuesta2 = "s"
