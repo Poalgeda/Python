@@ -4,7 +4,7 @@
 total=""
 num=int(input("Cuantos numeros quieres introducir: "))
 for cont in range(0,num):
-    var1=input("Introduce un numero:")
-    total+=var1
-    lista=total.split(",")
-    lista=total.sort()
+    var1=input("Introduce un numero: ")
+    lista += sorted(var1.split(","))
+print(lista)
+
