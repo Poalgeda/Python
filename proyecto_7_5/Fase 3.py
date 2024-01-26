@@ -11,6 +11,7 @@ while partida == "s":
     total2=0
     #---------------------------------turno del jugador--------------------------------------
     while respuesta1=="s":
+        #Dandole valor al tipo de carta según en random.choice.
         carta=random.choice(numeros)
         if carta==1:
             num=1
@@ -33,6 +34,7 @@ while partida == "s":
         elif carta==12:
             num=0.5
         total+=num
+        #pedir de repetir la accion
         print("")
         print(f"Carta: {carta}. Total: {total}")
         if total <= 7:
@@ -46,6 +48,7 @@ while partida == "s":
     print("                                                                                             ")
     print("                                                                                             ")
     while respuesta2=="s":
+        #temporizador para que el jugador pueda seguir los movimientos de la banca.
         var1=time.perf_counter()
         var2=0
         while var2 <1.2:
@@ -75,6 +78,7 @@ while partida == "s":
         print(f"Carta: {carta}. Total: {total2}")
         var1=time.perf_counter()
         var2=0
+        #Este codigo le da indicaciones a la banca según l9o que tenga el jugarj
         while var2 <2:
             var2=time.perf_counter()-var1
         if total2 <= 7:
@@ -98,6 +102,7 @@ while partida == "s":
         elif total2 > 7.5:
             print("-La banca se ha pasado-")
             respuesta2 ="n"
+    #resultados.
     var2=0
     while var2 <1.5:
         var2=time.perf_counter()-var1
@@ -118,5 +123,5 @@ while partida == "s":
     if partida=="s":
         respuesta1="s"
         respuesta2="s"
-
+#:)
 print("Fin del programa 😊👍")
