@@ -7,7 +7,7 @@ while respuesta=="s":
     if letra in lista:
         print()
         respuesta=input("Quieres repetir? s/n ")
-    elif letra.isalpha:
+    elif letra.isa:
         lista+=letra.split(",")
         respuesta=input("Quieres repetir? s/n ")
     else:
