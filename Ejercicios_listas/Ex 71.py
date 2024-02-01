@@ -3,7 +3,14 @@
 respuesta="s"
 lista=[]
 while respuesta=="s":
-    letra=input("Introduce una letra")
+    letra=input("Introduce una letra: ")
     if letra in lista:
         print()
-    elif letra
+        respuesta=input("Quieres repetir? s/n ")
+    elif letra.isalpha:
+        lista+=letra.split(",")
+        respuesta=input("Quieres repetir? s/n ")
+    else:
+        print()
+
+print(lista)
