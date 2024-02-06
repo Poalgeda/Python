@@ -4,6 +4,7 @@ lista=[]
 num=int(input("Cuantos numeros quieres introducir: "))
 for cont in range(0,num):
     var1 =input("Introduce un numero: ")
-    lista += sorted(var1.split(","))
-print(lista)
+    lista += var1.split(",")
+lista2=sorted(lista)
+print(lista2)
 
