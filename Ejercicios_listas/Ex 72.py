@@ -3,34 +3,23 @@
 respuesta="s"
 lista=[]
 vocal=None
-def vocales():
-    if letra in "aáàä":
-        letra="a"
-        vocal=True
-    elif letra in "eéèë":
-        letra="e"
-        vocal=True
-    elif letra in "iíìï":
-        letra="i"
-        vocal=True
-    elif letra in "oóòö":
-        letra="o"
-        vocal=True
-    elif letra in "uúùü":
-        letra="u"
-        vocal=True
-    else:
-        vocal=False
 
 
 while respuesta=="s":
-    #Controlador de letras.
+    #Convierte una vocal con tilde a una normal.
     letra=input("Introduce una letra: ")
     letra = letra.lower()
-    letra = vocales(letra)
-    if vocal==True:
-        
-        
+    if letra in "aáàäâ":
+        letra="a"
+    elif letra in "eéèëê":
+        letra="e"
+    elif letra in "iíìïî":
+        letra="i"
+    elif letra in "oóòöô":
+        letra="o"
+    elif letra in "uúùüû":
+        letra="u"
+    #Controla si la vocal esta o no en la lista y si es valida.
     if letra in lista:
         respuesta=input("Quieres repetir? s/n ")
     elif letra in "abcçdefghijklmnñopqrstuvwxyz":
@@ -38,6 +27,4 @@ while respuesta=="s":
         respuesta=input("Quieres repetir? s/n ")
     else:
         None
-
-
 print(lista)
