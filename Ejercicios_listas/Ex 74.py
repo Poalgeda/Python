@@ -5,16 +5,12 @@ lista2=['casa','luz','tres','tren','sol','pan']
 repetidos=[]
 no_repetidos=[]
 num1=len(lista2)
-#Que vaya valor por valor comprovando si se repiten.
-for cont in range(0, num1):
-    if lista2[0] in lista1:
-        i = lista1.index(lista2[0])
-        
+#Que vaya valor por valor comprovando si se repiten y se vayan sumando a sus correspondientes listas.
+for cont in lista2:
+    if lista2[0] == cont:
         repetidos += lista2[0].split(",")
-        lista2.pop(0)
     else:
         no_repetidos += lista2[0].split(",")
-        no_repetidos +=
         lista2.pop(0)
 #visualizar por pantalla.
 print(repetidos)
