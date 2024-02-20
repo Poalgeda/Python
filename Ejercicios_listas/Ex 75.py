@@ -7,8 +7,9 @@
 
 lista1=["a","b","D","x","r","X",3,"h","w",2,"i"]
 letras=0
+nums=0
 mayus=0
 suma_num=0
 valores=len(lista1)
-range=is
 print(f"Número de valores: {valores}")
+lista1.count(nums)
