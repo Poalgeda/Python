@@ -7,7 +7,7 @@ while respuesta=="s":
     letra=input("Introduce una letra: ")
     if letra in lista:
         respuesta=input("Quieres repetir? s/n ")
-    elif letra in "áàabcçdèéefghíìijklmnñóòopqrstúùuvwxyzÁÀABCÇDÉÈEFGHÍÌJKLMNÑÒÓPQRSTÙÚVWXYZ":
+    elif letra in "áàabcçdèéefghíìijklmnñóòopqrstúùuvwxyzÁÀABCÇDÉÈEFGHÍÌIJKLMNÑÒÓPQRSTÙÚVWXYZ":
         lista+=letra.split(",")
         respuesta=input("Quieres repetir? s/n ")
     else:
