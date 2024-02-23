@@ -5,13 +5,15 @@
 #d. Cantidad de mayúsculas 
 #e. Suma de los valores numéricos
 
+#valores :)
 lista1 = ['a', 'b', 'D', 'x', 'r', 'X', '3', 'h', 'w', '2', 'i']
 
-total = len(lista1)
+valores = len(lista1)
 numeros = 0
 mayusculas = 0
 letras=0
 suma_nums = 0
+#que detecte el programa que tipo de caracteres son y vaya haciendo las operaciones necesarias.
 for elemento in lista1:
     if elemento.isdigit():
         numeros += 1
@@ -22,8 +24,9 @@ for elemento in lista1:
     if elemento.isupper():
         mayusculas += 1
 
-print("Número de valores:", total)
-print("Cantidad de números:", numeros)
-print("Cantidad de letras:", letras)
-print("Cantidad de mayúsculas:", mayusculas)
-print("Suma total de números:", suma_nums)
+#print lo que se pide.
+print(f"Número de valores: {valores}")
+print(f"Cantidad de números: {numeros}")
+print(f"Cantidad de letras: {letras}")
+print(f"Cantidad de mayúsculas: {mayusculas}")
+print(f"Suma total de números: {suma_nums}")
