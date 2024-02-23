@@ -7,6 +7,7 @@ for cont in range(0,num):
     var1 =input("Introduce una palabra: ")
     lista += sorted(var1.split(","))
     lista2 += var1.split(",")
+#con el sort ordeno las listas.
 lista.sort(reverse=False)
 print(lista)
 lista2.sort(reverse=True)
