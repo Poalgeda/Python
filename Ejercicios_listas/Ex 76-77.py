@@ -27,14 +27,32 @@ while var1=="a":
     elif asc_desc == 1:
         lista_numeros.sort()
         lista_letras.sort()
-        for 
-        #Como habrán ahora dos letras repetidas con el nombre de 'x', elegimos la segunda y la convertimos en mayuscula, reciclando variables.
-        
+        #Insertar las mayusculas en sus sitios con ayuda de .insert()
+        for var in lista_letras:
+            if var == "x":
+                ix=lista_letras.index("x")
+            elif var == "b":
+                ib=lista_letras.index("b")
+        lista_letras.insert(ib+1, mayusculas[0])
+        lista_letras.insert(ix+2, mayusculas[1])
         print(lista_numeros)
         print(lista_letras)
-        
+        #Importante quitar las mayusculas para volver poder introducirlas en caso de que se eliga la otra opcion (se almacenan infinitamente)
+        lista_letras.remove("X")
+        lista_letras.remove("D")
     elif asc_desc == 2:
         lista_numeros.sort(reverse=True)
         lista_letras.sort(reverse=True)
+        #Insertar las mayusculas en sus sitios con ayuda de .insert()
+        for var in lista_letras:
+            if var == "x":
+                ix=lista_letras.index("x")
+            elif var == "b":
+                ib=lista_letras.index("b")
+        lista_letras.insert(ib, mayusculas[0])
+        lista_letras.insert(ix, mayusculas[1])
         print(lista_numeros)
         print(lista_letras)
+        lista_letras.remove("X")
+        lista_letras.remove("D")
+
