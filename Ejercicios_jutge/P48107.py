@@ -1,0 +1,5 @@
+a_b=input("")
+lista=a_b.split()
+d=int(lista[0])//int(lista[1])
+r=int(lista[0]) % int(lista[1])
+print(d,r)
