@@ -14,15 +14,15 @@ while intentos!=8 and lista_partida!=palabra:
     var=input("Introduce una letra: ")
     for x in palabra:
         if var==x:
-            i=x.index(palabra)
+            i=palabra.index(x)
             lista_partida[i]=var
-            print("Enhorabuena, has acertado un letra.")
-            print(lista_partida)
-    if var not in palabra:
+            palabra.remove(x)
+    if var in palabra:
             intentos+=1
             print("Esta letra no existe en la palabra...")
             lista_ahorcado+=ahorcado[0].split(" ")
             ahorcado.pop(0)
             print(lista_ahorcado)
+    print(lista_partida)
 if intentos==8:
      print("Has perdido! Te has quedado sin intentos.")
