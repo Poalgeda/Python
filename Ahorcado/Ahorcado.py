@@ -17,7 +17,7 @@ while intentos!=8 and lista_partida!=palabra:
             i=palabra.index(x)
             lista_partida[i]=var
             palabra.remove(x)
-    if var in palabra:
+    if var not in palabra or in lista_partida:
             intentos+=1
             print("Esta letra no existe en la palabra...")
             lista_ahorcado+=ahorcado[0].split(" ")
