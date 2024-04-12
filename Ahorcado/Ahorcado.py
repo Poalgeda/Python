@@ -8,10 +8,6 @@ lista_aciertos=[]
 lista_errores=[]
 while respuesta=="s":
     minutos=0
-    q_añadir=input("Quieres añadir otra palabra la lista? s/n ")
-    if q_añadir=="s":
-        añadir=input("Introduce la palabra que quieres añadir a la lista inicial: ")
-        lista_palabrasecreta+=añadir.split(",")
     lista_partida=[]
     lista_ahorcado=[]
     ahorcado=["A","H","O","R","C","A","D","O"]
@@ -22,9 +18,9 @@ while respuesta=="s":
     for cont in range (0, len(palabra)):
         lista_partida+="_".split(",")
     print(lista_partida)
+    start_time = time.time()
     while intentos!=8 and barra!=0:
         var=input("Introduce una letra: ")
-        start_time = time.time()
         #primero miro si se falla la letra, luego que pasa si es correcta.
         if var not in palabra:
             intentos+=1
@@ -45,21 +41,33 @@ while respuesta=="s":
                     palabra.insert(i, "-")
                 lista_aciertos+=var
         print(lista_partida)
+        print(f"Letras que no estan: {lista_errores}")
         barra=lista_partida.count("_")
     tiempo = time.time() - start_time
     tiempo= round(tiempo, 2)
-    while tiempo<60:
-        tiempo - 60
+    while tiempo>60:
+        tiempo-=60
         minutos+=1
     if intentos==8:
          print("Has perdido! Te has quedado sin intentos.")
     else:
         print("Has Ganado! Has adivinado la palabra.")
         #print la info del final.
-    print(f"Has acertado {len(lista_aciertos)} letras")
-    print(f"Has cometido {len(lista_errores)} errores ")
-    print(f"Has terminado la partida en {tiempo} segundos.")
+    print(f"Has tardado {minutos} minutos y {tiempo} segundos en terminar el programa.")
     if tiempo > 60:
         #Que se le notifique al jugador si ha tardado mas de un minuto en adivinar la palabra.
         print("Has tardado mas de un minuto :(")
+    print(f"Has acertado {len(lista_aciertos)} letras")
+    print(f"Has cometido {len(lista_errores)} errores ")
     respuesta=input("Quieres jugar otra partida? s/n ")
+    #Si quiere añadir otra palabra lo pongo al final porque asi no se notifica al inicio de cada programa.
+    #I depende de si solamente qui9ere hacer otra partida
+    if respuesta=="s":
+        q_añadir=input("Quieres añadir otra palabra la lista? s/n ")
+        if q_añadir=="s":
+            añadir=input("Introduce la palabra que quieres añadir a la lista inicial: ")
+            lista_palabrasecreta+=añadir.split(",")
+
+print("Fin del programa.")
+
+#txt
